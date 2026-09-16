@@ -1,0 +1,13 @@
+Brand icon geometry reused from the local CC Switch source:
+  src/icons/extracted/claude.svg
+  src/icons/extracted/openai.svg
+  src/components/BrandIcons.tsx (Claude/Codex mapping)
+
+CC Switch: https://github.com/farion1231/cc-switch
+See CC-Switch-LICENSE.txt for the source project's MIT license.
+Brand names and logos remain the property of their respective owners.
+
+claude.png: original #D97757 fill, rasterized to 16x16 transparent RGBA.
+codex.png: light #F0F0F0 OpenAI icon for dark backgrounds, matching
+CC Switch's light-on-dark Codex icon convention, 16x16 transparent RGBA.
+These icons identify the CC Switch app tabs, not the selected supplier.

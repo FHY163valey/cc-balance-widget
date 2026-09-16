@@ -1,0 +1,33 @@
+name: Windows offline tests
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: windows-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '22'
+      - name: Install source package
+        run: python -m pip install -e .
+      - name: Python syntax and offline tests
+        run: |
+          python -m compileall -q src tests
+          python -m unittest discover -s tests -v
+      - name: JavaScript syntax and offline tests
+        run: |
+          node --check src/cc_balance_widget/usage_runner.cjs
+          node --test tests/test_usage_runner.cjs
+      - name: Isolated demo check
+        run: .\Start.ps1 -Demo -Check
+      - name: Public tree scan
+        run: python scripts/check_public_tree.py

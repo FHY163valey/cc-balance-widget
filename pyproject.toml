@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cc-balance-widget"
+version = "0.1.0b1"
+description = "An unofficial Windows balance strip for CC Switch"
+requires-python = ">=3.12"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "FHY163valey"}]
+classifiers = ["Operating System :: Microsoft :: Windows", "Programming Language :: Python :: 3"]
+
+[project.scripts]
+cc-balance-widget = "cc_balance_widget.widget:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+cc_balance_widget = ["*.cjs", "assets/*.png", "assets/*.txt"]

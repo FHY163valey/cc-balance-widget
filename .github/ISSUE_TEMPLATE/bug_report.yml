@@ -1,0 +1,32 @@
+name: Bug report / 问题反馈
+description: Report a reproducible issue without private data.
+body:
+  - type: markdown
+    attributes:
+      value: "Do not attach keys, databases, raw settings or screenshots with real account details."
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Windows version, DPI, monitor/taskbar setup, Python/Node and CC Switch versions.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps and expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior and sanitized error
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy
+      options:
+        - label: I removed credentials, personal paths, provider IDs and real balances.
+          required: true
