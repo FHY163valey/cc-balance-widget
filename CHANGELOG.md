@@ -2,6 +2,7 @@
 
 ## Unreleased — v0.1.0-beta.1 candidate
 
+- Clarified on the repository front page that Claude and Codex providers are selectable from the right-click data-source settings.
 - Standalone Windows source project with a portable PowerShell launcher.
 - Read-only CC Switch provider selection by application and provider ID.
 - USD-only balance strip with source-isolated last-good cache.

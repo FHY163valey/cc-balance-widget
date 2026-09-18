@@ -14,6 +14,10 @@ This is an independent project, not an official CC Switch, Anthropic, or OpenAI
 component. `v0.1.0-beta.1` is a source preview candidate, not a claim that release
 acceptance has passed. See [verification status](docs/verification.md).
 
+> **Providers are selectable:** right-click the strip and choose **数据源设置**
+> (Data sources) to bind separate CC Switch providers for Claude and Codex.
+> `OpenRouter ICU` is only the initial exact-name candidate, not a hard-coded provider.
+
 ## Run from source
 
 Windows, Python 3.12+ with Tkinter, and Node.js 22+ are required for real queries.
